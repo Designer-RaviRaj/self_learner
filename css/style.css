@@ -1159,8 +1159,13 @@ h3.con_heading {
 }
 .navbar-light .navbar-toggler .navbar-toggler-icon::after{
   bottom: -8px;
-  right: 5.5px;
+  
   transform: rotate(-90deg) translateY(-50%);
 }
+
+.navbar-light .navbar-toggler .navbar-toggler-icon::after{
+  right: 5.5px;
+}
+
 
 /*  */
