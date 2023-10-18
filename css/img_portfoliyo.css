@@ -1,0 +1,176 @@
+
+
+
+/* nav */
+.gallery-nav {
+  margin-bottom: 50px;
+}
+
+.gallery-nav ul {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-filter {
+    border: none;
+  position: relative;
+  color: #aaa;
+  padding-bottom: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color .3s;
+  text-transform: uppercase;
+}
+
+.btn-filter.current,
+.btn-filter:hover {
+  color: #212121;
+}
+
+.btn-filter::after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #d8b75f;
+  transform: translateX(-50%);
+  transition: width .3s;
+  z-index: -1;
+}
+
+.btn-filter.current::after,
+.btn-filter:hover::after {
+  width: 100%;
+}
+
+.gallery {
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  display: block;
+  width: 25%;
+  overflow: hidden;
+}
+
+.card-wrap {
+  position: relative;
+  top: 0;
+  transition: all .3s;
+  transform: scale(.9);
+}
+
+/* .card.show .card-wrap {
+  transform: scale(1);
+} */
+
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%;
+  overflow: hidden;
+}
+
+.card-img img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* .card:hover .card-wrap {
+  top: -50%;
+} */
+
+/* modal */
+.modal {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .8);
+  z-index: 100;
+}
+
+.modal-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.img-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-img {
+  width: 50vmin;
+}
+
+.modal-btn {
+  position: absolute;
+  display: block;
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 700;
+  color: #444;
+  transition: all .5s;
+}
+
+.modal-btn[data-type=prev] {
+  top: 50%;
+  left: 5vw;
+  transform: translateY(-50%);
+}
+
+.modal-btn[data-type=next] {
+  top: 50%;
+  right: 5vw;
+  transform: translateY(-50%);
+}
+
+.modal-btn[data-type=close] {
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
+
+.modal-btn[data-type=close] .line {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: #444;
+}
+
+.modal-btn[data-type=close] .line:first-of-type {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-btn[data-type=close] .line:last-of-type {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
